@@ -12,15 +12,14 @@ intents = discord.Intents.default()
 intents.members = True
 
 bot_token = bot_config.token
+cmd_prefix = bot_config.prefix
 print(bot_token)
 
-bot = commands.Bot(command_prefix='!org ', description=description, intents=intents)
+bot = commands.Bot(command_prefix=cmd_prefix, description=description, intents=intents)
 
 @bot.event
 async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
+    print(f'Logged in as {bot.user.name} ({bot.user.id})!')
     print('------')
 
 @bot.command()
