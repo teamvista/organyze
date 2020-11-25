@@ -342,3 +342,5 @@ $RECYCLE.BIN/
 ### Repository-specific .gitignores:
 
 organyze_env
+basicbot.py
+bot_config.py
